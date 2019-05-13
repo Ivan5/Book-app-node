@@ -36,4 +36,25 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/:id", (req, res) => {
+  res.send("Show author " + req.params.id);
+});
+
+router.get("/:id/edit", async (req, res) => {
+  try {
+    const author = await Author.findById(req.params.id);
+    res.render("authors/edit", { author: author });
+  } catch (error) {
+    res.redirect("/authors");
+  }
+});
+
+router.put("/:id", (req, res) => {
+  res.send("Update author " + req.params.id);
+});
+
+router.delete("/:id", (req, res) => {
+  res.send("Delete author " + req.params.id);
+});
+
 module.exports = router;
