@@ -1,6 +1,8 @@
 @import "header.css";
 @import "buttons.css";
 @import "form.css";
+@import "author.css";
+
 :root {
   font-family: "Fira Code";
   font-size: 20px;
