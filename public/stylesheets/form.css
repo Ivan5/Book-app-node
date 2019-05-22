@@ -19,7 +19,57 @@
   flex-grow: 0;
 }
 
+.form-row-end {
+  justify-content: flex-end;
+}
+
 .form-item > label {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid hsl(200, 100%, 50%);
+  background: hsl(200, 100%, 31%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: "Fira Code";
+  outline: none;
+}
+
+.form-item textarea {
+  height: 100%;
+  resize: none;
+}
+
+.form-item select option {
+  background-color: #000;
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.filepond--root {
+  font-family: "Fira Code";
+  margin-bottom: 0;
+}
+
+.filepond--panel-root {
+  background-color: hsl(200, 100%, 31%);
+  border: 1px solid hsl(200, 100%, 50%);
+}
+
+.filepond--drop-label {
+  color: #fff;
+  font-size: inherit;
 }
